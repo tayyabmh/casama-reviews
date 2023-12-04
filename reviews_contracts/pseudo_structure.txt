@@ -1,0 +1,16 @@
+Alright, so the way we need this to work. Is that every time a specific type of transaction happens, let's say an on-chain payment... it triggers a review opportunity for both parties.
+
+This data will be stored inside of Tableland, and can be publicly read by anyone. Additionally, there will be an opportunity to do private reviews that are only visible by permission given by the user.
+
+Two contracts:
+    - Invoice
+        - A person can create an open invoice for a customer that has received certain services.
+        - Payments are handled on-chain
+        - Invoices are cleared as they are paid
+        - For now all invoices are one-off payments
+        - [Optional] These can be recurring
+        - [Optional] You can get fancier with payment structures
+    - Reviews
+        - Every paid invoice can create an opportunity for reviews by both parties
+        - Reviews are public by default
+        - [Optional] Parties can do private reviews that are encrypted and only shown upon request.
